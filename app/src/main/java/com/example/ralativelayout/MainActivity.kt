@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         //FragmentTransaction을 변경하고 나면, 반드시 commit()을 호출해야 변경 내용이 적용됩니다.
         fragmentTransaction.commit()
 
-        //fragment관리
+        //fragment관리?
         //백 스택??
         //액티비티에서 프래그먼트를 사용하는 경우에는 특히 사용자 상호작용에 응답하여 추가, 제거, 교체 및 다른 작업을 수행할 수 있다는 점이 유용합니다.
 
