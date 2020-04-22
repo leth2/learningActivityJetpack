@@ -9,7 +9,7 @@ pipeline {
 
     stage('assembleDebug') {
       steps {
-        sh './gradlew assembleDebug --stacktrace'
+        sh './gradlew --no-daemon assembleDebug --stacktrace'
       }
     }
 
