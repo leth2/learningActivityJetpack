@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('archive') {
       steps {
         archiveArtifacts(artifacts: '*/build/**/*.apk', onlyIfSuccessful: true)
       }
