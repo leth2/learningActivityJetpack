@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sshPublisher(alwaysPublishFromMaster: true, masterNodeName: 'nodeServer')
+      }
+    }
+
   }
 }
