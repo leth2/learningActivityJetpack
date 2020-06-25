@@ -11,7 +11,7 @@ pipeline {
 
         stage('send start') {
           steps {
-            mattermostSend(endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', message: 'build start', failOnError: true, channel: 'test')
+            mattermostSend(endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', message: 'Build STARTED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)', failOnError: true, channel: 'test')
           }
         }
 
@@ -51,7 +51,7 @@ echo "JOB_URL" :: $JOB_URL'''
 
     stage('mattamost') {
       steps {
-        mattermostSend(message: 'new artifact', endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true, channel: 'test')
+        mattermostSend(message: 'Build SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)', endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true, channel: 'test')
       }
     }
 
