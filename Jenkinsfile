@@ -26,7 +26,7 @@ echo "JENKINS_HOME" :: $JENKINS_HOME
 echo "JENKINS_URL" :: $JENKINS_URL
 echo "BUILD_URL" ::$BUILD_URL
 echo "JOB_URL" :: $JOB_URL'''
-            mattermostSend '"Build STARTED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)"'
+            mattermostSend 'Build STARTED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)'
           }
         }
 
