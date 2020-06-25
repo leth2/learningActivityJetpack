@@ -5,13 +5,8 @@ pipeline {
       parallel {
         stage('permission setting ') {
           steps {
-            sh 'chmod +x gradlew'
-          }
-        }
-
-        stage('send start') {
-          steps {
-            mattermostSend(endpoint: 'http://leth2.asuscomm.com:7778/hooks/m4o7f9ex5pdajr145bqoanaihy', message: 'Build STARTED: ${JOB_NAME} #${BUILD_NUMBER} (<${BUILD_URL}|Link to build>)', failOnError: true, channel: 'test')
+            sh '''chmod +x gradlew
+'''
           }
         }
 
@@ -31,6 +26,7 @@ echo "JENKINS_HOME" :: $JENKINS_HOME
 echo "JENKINS_URL" :: $JENKINS_URL
 echo "BUILD_URL" ::$BUILD_URL
 echo "JOB_URL" :: $JOB_URL'''
+            mattermostSend '"Build STARTED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)"'
           }
         }
 
