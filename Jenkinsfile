@@ -11,7 +11,7 @@ pipeline {
 
         stage('send start') {
           steps {
-            mattermostSend(endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', message: 'build start', failOnError: true)
+            mattermostSend(endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', message: 'build start', failOnError: true, channel: 'test')
           }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
     stage('mattamost') {
       steps {
-        mattermostSend(message: 'new artifact', endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true)
+        mattermostSend(message: 'new artifact', endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true, channel: 'test')
       }
     }
 
