@@ -19,9 +19,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('mattamost') {
       steps {
-        sshPublisher(alwaysPublishFromMaster: true, masterNodeName: 'nodeServer')
+        mattermostSend(message: 'new artifact', endpoint: 'http://localhost:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true)
       }
     }
 
