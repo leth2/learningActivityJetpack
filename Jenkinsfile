@@ -21,7 +21,7 @@ pipeline {
 
     stage('mattamost') {
       steps {
-        mattermostSend(message: 'new artifact', endpoint: 'http://localhost:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true)
+        mattermostSend(message: 'new artifact', endpoint: 'http://192.168.1.210:8065/hooks/m4o7f9ex5pdajr145bqoanaihy', failOnError: true)
       }
     }
 
